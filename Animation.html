@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CCS3Animation——3DRotate</title>
+		<meta charset="utf-8"/>
+		<style>
+			#Panel{
+				margin:0 auto;
+				width:500px;
+				height:500px;
+				background-color:transparent;
+				position:relative;
+				-webkit-transform-style:preserve-3d;
+				-webkit-transform:rotateX(-33.5deg) rotateY(45deg);
+				-webkit-animation:rota 2s linear 0s infinite normal;
+				-moz-transform-style:preserve-3d;
+				-moz-transform:rotateX(-33.5deg) rotateY(45deg);
+				-moz-animation:rota 2s linear 0s infinite normal;
+			}
+			@-webkit-keyframes rota{
+				from{
+					-webkit-transform:rotateX(-33.5deg) rotateY(45deg);
+					}
+				to{
+					-webkit-transform:rotateX(-33.5deg) rotateY(405deg);
+					}
+			}
+			@-moz-keyframes rota{
+				from{
+					-moz-transform:rotateX(-33.5deg) rotateY(45deg);
+					}
+				to{
+					-moz-transform:rotateX(-33.5deg) rotateY(405deg);
+					}
+			}
+			#Panel div{
+				width:100px;
+				height:100px;
+				opacity:0.4;
+				position:absolute;
+				top:202px;
+				left:202px;
+			}
+			#Panel #top{
+				background-color:red;
+				-webkit-transform:rotateX(90deg) translateZ(50px);
+				-moz-transform:rotateX(90deg) translateZ(50px);
+			}
+			#Panel #bottom{
+				background-color:pink;
+				-webkit-transform:rotateX(90deg) translateZ(-50px);
+				-moz-transform:rotateX(90deg) translateZ(-50px);
+			}
+			#Panel #left{
+				background-color:green;
+				-webkit-transform:translateZ(-50px);
+				-moz-transform:translateZ(-50px);
+			}
+			#Panel #right{
+				background-color:blue;
+				-webkit-transform:translateZ(50px);
+				-moz-transform:translateZ(50px);
+			}
+			#Panel #front{
+				background-color:yellow;
+				-webkit-transform:rotateY(90deg) translateZ(50px);
+				-moz-transform:rotateY(90deg) translateZ(50px);
+			}
+			#Panel #back{
+				background-color:black;
+				-webkit-transform:rotateY(90deg) translateZ(-50px);
+				-moz-transform:rotateY(90deg) translateZ(-50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="Panel">
+			<div id="top"></div>
+			<div id="bottom"></div>
+			<div id="left"></div>
+			<div id="right"></div>
+			<div id="front"></div>
+			<div id="back"></div>
+		</div>
+	</body>
+</html>
